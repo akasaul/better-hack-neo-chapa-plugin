@@ -1,13 +1,29 @@
 {
   "name": "better-hack-neo-chapa-better-auth-plugin",
   "version": "1.0.0",
-  "author": "Nikodimos Jemaneh",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "This is a better auth plugin integrating chapa into the mighty better-auth"
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup",
+    "dev": "npm run build -- --watch"
+  },
+  "keywords": [
+    "chapa",
+    "better-auth",
+    "payment",
+    "plugin",
+    "better-auth-plugin"
+  ],
+  "license": "MIT",
+  "description": "This is a better auth plugin integrating chapa into the mighty better-auth",
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "^8.0.1",
+    "chapa-nodejs": "^2.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "tsup": "^8.5.0"
+  }
 }
