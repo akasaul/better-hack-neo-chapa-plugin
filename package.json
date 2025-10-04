@@ -1,0 +1,13 @@
+{
+  "name": "better-hack-neo-chapa-better-auth-plugin",
+  "version": "1.0.0",
+  "author": "Nikodimos Jemaneh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "This is a better auth plugin integrating chapa into the mighty better-auth"
+}
