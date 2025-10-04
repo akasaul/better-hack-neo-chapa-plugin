@@ -1,6 +1,10 @@
 import type { BetterAuthClientPlugin } from "better-auth/client";
 import type { chapaPlugin } from "./index";
-import { InitializeOptions, VerifyOptions } from "chapa-nodejs";
+import {
+  InitializeOptions,
+  TransferOptions,
+  VerifyOptions,
+} from "chapa-nodejs";
 
 export const chapaClient = () => {
   return {
@@ -21,6 +25,14 @@ export const chapaClient = () => {
 
           verifyPayment: async (options: VerifyOptions) => {
             const res = await $fetch("/chapa/verify", {
+              method: "POST",
+              body: options,
+            });
+            return res;
+          },
+
+          transfer: async (options: TransferOptions) => {
+            const res = await $fetch("/chapa/transfer", {
               method: "POST",
               body: options,
             });
