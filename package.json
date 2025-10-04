@@ -18,7 +18,10 @@
     "db:generate": "turbo -F server db:generate",
     "db:migrate": "turbo -F server db:migrate"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@better-fetch/fetch": "^1.1.18",
+    "zod": "^4.1.11"
+  },
   "devDependencies": {
     "turbo": "^2.5.4"
   },
