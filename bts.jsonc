@@ -1,0 +1,28 @@
+// Better-T-Stack configuration file
+// safe to delete
+
+{
+  "$schema": "https://r2.better-t-stack.dev/schema.json",
+  "version": "2.50.0",
+  "createdAt": "2025-10-04T15:13:34.485Z",
+  "database": "postgres",
+  "orm": "prisma",
+  "backend": "hono",
+  "runtime": "bun",
+  "frontend": [
+    "tanstack-router"
+  ],
+  "addons": [
+    "turborepo"
+  ],
+  "examples": [
+    "ai",
+    "todo"
+  ],
+  "auth": "better-auth",
+  "packageManager": "bun",
+  "dbSetup": "none",
+  "api": "trpc",
+  "webDeploy": "none",
+  "serverDeploy": "none"
+}
