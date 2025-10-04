@@ -19,6 +19,7 @@
   "description": "This is a better auth plugin integrating chapa into the mighty better-auth",
   "devDependencies": {
     "@sindresorhus/tsconfig": "^8.0.1",
+    "better-auth": "^1.3.26",
     "chapa-nodejs": "^2.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
