@@ -1,10 +1,19 @@
 import type { BetterAuthPlugin } from "better-auth";
+import { initialize } from "./endpoints/initialize";
+import { ChapaOptions } from "./types";
 
-export const chapaPlugin = () => {
-  // Inject Chapa client into all endpoints using factory pattern
+export const chapaPlugin = (options: ChapaOptions) => {
+  const plugins = [initialize()]
+    .map((endpoint) => endpoint(options.client))
+    .reduce((acc, endpoint) => {
+      Object.assign(acc, endpoint);
+      return acc;
+    }, {});
 
   return {
     id: "chapa",
-    endpoints: {},
+    endpoints: {
+      ...plugins,
+    },
   } satisfies BetterAuthPlugin;
 };
