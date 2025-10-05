@@ -1,5 +1,6 @@
 import type { Chapa } from "chapa-nodejs";
 import { APIError, createAuthEndpoint } from "better-auth/api";
+import { ChapaInitializeResponse } from "../types";
 
 export const initialize = () => (client: Chapa) => {
   return {
@@ -40,7 +41,10 @@ export const initialize = () => (client: Chapa) => {
             ...(meta && { meta }),
           });
 
-          return ctx.json(response);
+          return ctx.json({
+            ...response,
+            tx_ref,
+          }) as unknown as ChapaInitializeResponse;
         } catch (error: any) {
           throw new APIError("BAD_REQUEST", {
             message: "Failed to initialize payment",

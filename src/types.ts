@@ -109,3 +109,7 @@ export interface ChapaOptions {
   webhookSecret?: string;
   webhookHandlers?: ChapaWebhookHandlers;
 }
+
+export interface ChapaInitializeResponse extends InitializeResponse {
+  tx_ref: string;
+}
